@@ -1,0 +1,352 @@
+/* Global Styles */
+:root {
+  --primary-color: #e50914;
+  --dark-color: #141414;
+  --light-color: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: #000;
+  color: #999;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+.showcase {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("https://i.ibb.co/vXqDmnh/background.jpg") no-repeat center
+    center/cover;
+}
+
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 20px 20px 50px #000000, inset -20px -20px 50px #000000;
+}
+
+.showcase-top {
+  position: relative;
+  z-index: 2;
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.showcase-top img {
+  width: 100px;
+  margin-top: -10px;
+}
+
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.showcase-content h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.showcase-content p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.showcase-content .subscription p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.subscription-email-btn form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subscription-email-btn input {
+  font-size: 1rem;
+  padding: 1rem;
+  width: 90%;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.subscription-email-btn input:focus {
+  outline: none;
+  border: none;
+}
+
+.subscription-email-btn a {
+  font-size: 1rem;
+}
+
+/* content */
+.contents {
+  background: #000;
+}
+
+.contents .third-content {
+  border-bottom: 5px solid #333;
+}
+
+.content {
+  border-top: 5px solid #333;
+  display: grid;
+  overflow: hidden;
+  padding: 1rem;
+  height: 70vh;
+  text-align: center;
+  color: white;
+  grid-template-areas:
+    "atas"
+    "bawah";
+}
+
+.content .text-content {
+  grid-area: "bawah";
+  display: flex;
+  flex-direction: column;
+}
+
+.content .text-xl {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+}
+
+.content .content-image {
+  grid-area: "atas";
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Footer */
+.footer {
+  width: 80%;
+  margin: 1rem auto;
+  overflow: auto;
+}
+
+.footer,
+.footer a {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.footer li {
+  line-height: 1.8;
+}
+
+/* Container */
+.container {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* Text Styles */
+.text-xl {
+  font-size: 2rem;
+}
+
+.text-lg {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.text-md {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-dark {
+  color: #999;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-rounded {
+  border-radius: 5px;
+}
+
+.btn-xl {
+  font-weight: 200;
+  font-size: 1rem;
+  padding: 1.2rem 1rem;
+}
+
+.btn-lg {
+  font-size: 1rem;
+  padding: 0.8rem 1.3rem;
+  text-transform: uppercase;
+}
+
+.btn-icon {
+  margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  /* Showcase */
+  .showcase-top img {
+    width: 150px;
+    /* top: 50%; */
+    margin-top: 10px;
+  }
+
+  .showcase-top a {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .showcase-content {
+    margin-top: 7rem;
+  }
+
+  .showcase-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .showcase-content p {
+    font-size: 1.5rem;
+  }
+
+  .subscription-email-btn a {
+    padding: 1rem 1rem;
+  }
+
+  /* Contents */
+  .content {
+    padding: 0 2rem;
+    grid-template-areas: "atas bawah";
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 60vh;
+  }
+
+  .footer .footer-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* Showcase */
+  .showcase-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .showcase-content p {
+    font-size: 1.8rem;
+  }
+
+  /* Contents */
+  .content {
+    height: 70vh;
+    text-align: left;
+  }
+
+  .content .text-xl {
+    font-size: 3rem;
+  }
+
+  .content p {
+    font-size: 1.5rem;
+  }
+}
